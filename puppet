@@ -1,0 +1,12 @@
+if sudo rpm -ivh https://yum.puppetlabs.com/puppetlabs-release-pc1-el-7.noarch.rpm; then
+    echo "installed puppet labs"
+fi
+if sudo yum -y install puppetserver; then
+	echo "installed puppet server"
+fi
+if sudo systemctl start puppetserver; then
+	echo "started puppet server"
+fi
+if sudo systemctl enable puppetserver; then
+	echo "enabled pupper server"
+fi
